@@ -11,4 +11,6 @@
     <color name="chestnut">#CC4853</color>
     <color name="form_heading">#368ECD</color>
     <color name="Bg_field">#D9D9D9</color>
+    <color name="Gray_text">#888484</color>
+    <color name="clickable_txt">#2134DF</color>
 </resources>

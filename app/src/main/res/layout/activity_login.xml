@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="40dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/help"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:contentDescription="Help"/>
 
 
     <LinearLayout
@@ -26,7 +27,8 @@
         android:background="@drawable/bg_tab"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:elevation="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +70,7 @@
             android:text="Forgot Password?"
             android:layout_gravity="left"
             android:textSize="18sp"
-            android:textColor="#2134DF"
+            android:textColor="@color/clickable_txt"
             android:layout_marginTop="5dp"
             android:padding="5dp"/>
 
@@ -76,17 +78,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:src="@drawable/submit"/>
+            android:src="@drawable/submit"
+            android:contentDescription="Submit"
+            android:background="@color/white"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create new Account! SignUp"
-            android:layout_gravity="center"
-            android:textSize="18sp"
-            android:textColor="#2134DF"
-            android:layout_marginTop="70dp"
-            android:padding="5dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create new Account!"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/Gray_text"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/Signup_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignUp"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/clickable_txt"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
