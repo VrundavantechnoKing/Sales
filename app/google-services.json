@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "724660835070",
+    "project_id": "sales-management-d95ea",
+    "storage_bucket": "sales-management-d95ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724660835070:android:71071613adaa9b02a74baf",
+        "android_client_info": {
+          "package_name": "com.example.testlottie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724660835070-ps0e1mmr252mg22kgf2vsiuibaoh5la1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxiTHcn21J26Q0kdhkxMHiYPEpS_6A2WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724660835070-ps0e1mmr252mg22kgf2vsiuibaoh5la1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

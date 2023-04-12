@@ -6,17 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity"
     android:orientation="vertical"
-    android:background="@drawable/loginbg">
-
-    <ImageButton
-        android:layout_width="wrap_content"
+    android:background="@drawable/loginbg"
+    android:elevation="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/help"
-        android:layout_gravity="right"
-        android:contentDescription="Help"/>
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/help"
+            android:layout_gravity="right"
+            android:contentDescription="Help"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,44 +35,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="35dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bg_tab">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <androidx.cardview.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:elevation="12dp"
-                app:cardCornerRadius="50dp"
                 android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:elevation="12dp"
                 android:innerRadius="0dp"
                 android:shape="ring"
                 android:thicknessRatio="1.9"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp">
+                app:cardCornerRadius="50dp">
+
                 <ImageView
-                    android:layout_height="100dp"
-                    android:layout_width="100dp"
                     android:id="@+id/imageView1"
-                    android:src="@drawable/profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
-                    android:contentDescription="Profilepic">
-                </ImageView>
+                    android:contentDescription="Profilepic"
+                    android:src="@drawable/person"></ImageView>
             </androidx.cardview.widget.CardView>
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_background"
+                android:backgroundTint="@color/Bg_field"
+                android:drawableLeft="@drawable/person"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/edit_background"
                 android:backgroundTint="@color/Bg_field"
@@ -79,39 +100,13 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:padding="12dp" />
+
             <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/edit_background"
-                android:backgroundTint="@color/Bg_field"
-                android:drawableLeft="@drawable/password"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="12dp" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/edit_background"
-                android:backgroundTint="@color/Bg_field"
-                android:drawableLeft="@drawable/password"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:padding="12dp" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/edit_background"
                 android:backgroundTint="@color/Bg_field"
@@ -121,40 +116,91 @@
                 android:hint="Address"
                 android:inputType="textLongMessage"
                 android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_background"
+                android:backgroundTint="@color/Bg_field"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Contact"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_background"
+                android:backgroundTint="@color/Bg_field"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/C_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_background"
+                android:backgroundTint="@color/Bg_field"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+
             <ImageButton
+                android:id="@+id/submit_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/submit"
+                android:background="@color/white"
                 android:contentDescription="Submit"
-                android:background="@color/white"/>
+                android:src="@drawable/submit" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="50dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Already have Account!"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text="Already have Account!"
                     android:textColor="@color/Gray_text"
-                    android:padding="5dp"/>
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Signin_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SignIn"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
-                    android:textColor="@color/clickable_txt"
+                    android:layout_marginLeft="5dp"
                     android:padding="5dp"
-                    android:layout_marginLeft="5dp"/>
+                    android:text="SignIn"
+                    android:textColor="@color/clickable_txt"
+                    android:textSize="18sp" />
 
             </LinearLayout>
         </LinearLayout>

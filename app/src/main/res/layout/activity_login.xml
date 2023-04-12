@@ -8,16 +8,18 @@
     tools:context=".LoginActivity"
     android:background="@drawable/loginbg"
     android:orientation="vertical">
-
-    <ImageButton
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/help"
-        android:layout_gravity="right"
-        android:contentDescription="Help"/>
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/help"
+            android:layout_gravity="right"
+            android:contentDescription="Help"/>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -39,6 +41,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -52,6 +55,7 @@
             android:padding="12dp" />
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -65,6 +69,7 @@
             android:padding="12dp" />
 
         <TextView
+            android:id="@+id/reset_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot Password?"
@@ -75,6 +80,7 @@
             android:padding="5dp"/>
 
         <ImageButton
+            android:id="@+id/submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
