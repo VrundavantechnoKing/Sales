@@ -25,7 +25,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText name,email,password,C_password,address,contact;
@@ -52,6 +57,7 @@ public class RegistrationActivity extends AppCompatActivity {
         C_password=findViewById(R.id.C_password);
         submit_btn=findViewById(R.id.submit_btn);
         SignIn_btn=findViewById(R.id.Signin_btn);
+
 
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,15 +102,18 @@ public class RegistrationActivity extends AppCompatActivity {
                 progressDialog.show();
                 mAuth.createUserWithEmailAndPassword(S_email, S_password)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 startActivity(new Intent(RegistrationActivity.this,LoginActivity.class));
                                 finish();
                                 progressDialog.cancel();
 
+
                                 firestore.collection("User")
                                         .document(FirebaseAuth.getInstance().getUid())
                                         .set(new UserModel(S_name,S_email,S_address,S_contact,S_password));
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
