@@ -91,7 +91,6 @@ public class CustomerRegistrationActivity extends AppCompatActivity {
                                 Toast.makeText(CustomerRegistrationActivity.this, "Error adding data to document: " + e.getMessage(),Toast.LENGTH_LONG);
                             }
                         });
-
             }
         });
     }
